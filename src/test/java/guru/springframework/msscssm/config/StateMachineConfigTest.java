@@ -22,13 +22,13 @@ class StateMachineConfigTest {
     void TestStateMachine() {
         StateMachine<PaymentState, PaymentEvent> stateMachine = stateMachineFactory.getStateMachine(UUID.randomUUID());
         stateMachine.start();
-        System.out.println(stateMachine.getState().toString());
+        System.out.println("*****" + stateMachine.getState().toString());
         stateMachine.sendEvent(PaymentEvent.PRE_AUTHORIZE);
-        System.out.println(stateMachine.getState().toString());
+        System.out.println("*****" + stateMachine.getState().toString());
         //stateMachine.sendEvent(PaymentEvent.PRE_AUTH_APPROVED);
-        //System.out.println(stateMachine.getState().toString());
+        //System.out.println("*****" + stateMachine.getState().toString());
         stateMachine.sendEvent(PaymentEvent.PRE_AUTH_DECLINED);
-        System.out.println(stateMachine.getState().toString());
+        System.out.println("*****" + stateMachine.getState().toString());
 
 
 
