@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 @Data
 @Builder
 @NoArgsConstructor
-//@AllArgsConstructor
+@AllArgsConstructor
 public class Payment {
 
     @Id
