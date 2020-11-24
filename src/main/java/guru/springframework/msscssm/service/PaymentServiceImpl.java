@@ -50,6 +50,7 @@ public class PaymentServiceImpl implements PaymentService {
         return null;
     }
 
+    @Deprecated
     @Override
     public StateMachine<PaymentState, PaymentEvent> declineAuth(Long paymentId) {
         StateMachine<PaymentState,PaymentEvent> stateMachine = this.build(paymentId);
